@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AV Car Detailing | Welcome</title>
+    <link rel="stylesheet" type="text/css" href="bulma.css"> <!--css stylesheet-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"> <!--bulma-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> <!--FontAwesome-->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script> <!--jQuery-->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script> <!-- sweet alert 2 -->
+	<script src="sweetalert2.all.min.js"></script> <!-- sweet alert 2 -->
+	<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script> <!-- sweet alert 2 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script> <!-- magnific popup -->
+    <script src="avcd.js" defer></script> <!--AVCD Javascript-->
+</head>
+
+<body>
+    <header>
+			<!--upper navigation start-->
+            <section id="uppernav">
+                <div class="container">
+                <div class="contact-social">
+                <!-- phone contact -->
+                <a id="device-phone-link" href="tel:0427128069">
+                <i class="fas fa-phone"></i>
+                <span>0427 128 069</span></a>
+
+                <!-- email contact -->
+                <a id="device-email-link" href="mailto:andyviereck@gmail.com?subject=Mail from the Website">
+                <i class="fas fa-envelope"></i>
+                <span>andyviereck@gmail.com</span></a>
+
+                <!-- facebook link -->
+                <a href="https://www.facebook.com/avcardetailing/" target="_blank">
+                <i class="fab fa-facebook-f"></i></a>
+
+                <!-- instagram link -->
+                <a href="https://www.instagram.com/avcardetailing/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                </div>
+            </section>
+			<!--upper navigation end-->
+
+
+		<!--main navigation start-->
+		<div class="container">
+		<nav class="main-nav">
+			<div class="brand-name"><img src="images/av-cd-logo-alt-2.png" width="100"></div>
+			<a href="#" class="toggle-button">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</a>
+			<div class="navbar-links">
+				<ul>
+                    <li class="active-menu"><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+			</div>
+		</nav>
+		</div>
+		<!--main navigation end-->
+    </header>
+
+	<!--landing page text-->
+    <section id="landing-page">
+    <div class="container">
+		<div class="center">
+			<h1> TOP CLASS MOBILE DETAILING SERVICES </h1>
+		</div>
+    </div>
+    </section>
+
+	<!--about section-->
+    <section id="about-section">
+    <div class="container">
+        <h1> ABOUT AV CAR DETAILING</h1>
+        <p>AV Car Detailing is a Mobile Car Cleaning and Detailing service which has been in operation since 2003. From a Mini Detail to a Full Pre-Sale Detail, we cater to our clients particular needs and requests. We offer services such as Paint Protection, Machine Polishing, Full Interior Detailing, Leather Cleaning and Rejuvenation, Exterior Detailing, Engine Bay Detailing and Regular Mini Detail/Maintenance Details. We use quality products and deliver service of a high standard. We are fully insured and your vehicle will be in the best of hands when entrusted to us.</p>
+        </div>
+    </section>
+
+	<!--our services banner-->
+    <section id="our-services">
+    <div class="container">
+        <h1> Our Services</h1>
+        </div>
+    </section>
+
+	<!--services tile and modal popup start-->
+    <section id="services">
+    <div class="container">
+	<div class="service-section">
+			<ul class="service-grid">
+
+				<!--Full Detail tile-->
+				<li>
+				<div class="service-box service-img-1">
+				<div id="serviceOne" onclick="s1();">
+				<div class="service-info">
+					<h3>Full Detail (Pre-Sale)</h3>
+					<p>Cleaning Duration: Allow 4-6 hours</p>
+				</div></div></div>
+				</li>
+				<!--Full Detail tile-->
+
+				<!--Hand Polish tile-->
+				<li>
+				<div class="service-box service-img-2">
+				<div id="serviceTwo" onclick="s2();">
+				<div class="service-info">
+					<h3>Hand Polish Detail</h3>
+					<p>Cleaning Duration: Allow 2-3 hours</p>
+				</div></div></div>
+				</li>
+				<!--Hand Polish tile-->
+
+				<!--Mini Detail tile-->
+				<li>
+				<div class="service-box service-img-3">
+				<div id="serviceThree" onclick="s3();">
+				<div class="service-info">
+					<h3>Mini Detail</h3>
+					<p>Cleaning Duration: Allow 1-2 hours</p>
+				</div></div></div>
+				</li>
+				<!--Mini Detail tile-->
+
+				<!--Interior Detail tile-->
+				<li>
+				<div class="service-box service-img-4">
+				<div id="serviceFour" onclick="s4();">
+				<div class="service-info">
+					<h3>Interior Detail</h3>
+					<p>Cleaning Duration: Allow 4-6 hours</p>
+				</div></div></div>
+				</li>
+				<!--Interior Detail tile-->
+
+				<!--leather Cleaning tile-->
+				<li>
+				<div class="service-box service-img-5">
+				<div id="serviceFive" onclick="s5();">
+				<div class="service-info">
+					<h3>Leather Cleaning</h3>
+					<p></p>
+				</div></div></div>
+				</li>
+				<!--Leather Cleaning tile-->
+
+				<!--Ceramic Paint Protection tile-->
+				<li>
+				<div class="service-box service-img-6">
+				<div id="serviceSix" onclick="s6();">
+				<div class="service-info">
+					<h3>Ceramic Paint Protection</h3>
+					<p></p>
+					</div></div></div>
+				</li>
+				<!--Ceramic Paint Protection tile-->
+
+        <!--Machine Polish and Paint Correction tile-->
+				<li>
+				<div class="service-box service-img-7">
+				<div id="serviceSix" onclick="s7();">
+				<div class="service-info">
+					<h3 id="largetxt">Machine Polish and Paint Correction</h3>
+					<p>Cleaning Duration: Allow 6-8 hours</p>
+					</div></div></div>
+				</li>
+				<!--Machine Polish and Paint Correction tile-->
+
+			</ul>
+
+		</div>
+		</div>
+  	</section>
+	<!--services tile and modal popup end-->
+
+	<!--quote form banner-->
+   <section id="full-quote-form">
+    <div class="container">
+        <h1>CONTACT</h1>
+        </div>
+    </section>
+
+
+
+	<!--contact and quote banner-->
+    <section id="contact-banner">
+    <div class="container">
+        <h1> CONTACT OR EMAIL US FOR A QUOTE OR BOOKING</h1>
+        <div class="contact-social-banner">
+                <!-- phone contact -->
+                <a id="device-phone-link" href="tel:0427128069">
+                <i class="fas fa-phone"></i>
+                <span>0427 128 069 </span></a>
+
+                <!-- email contact -->
+                <a id="device-email-link" href="mailto:andyviereck@gmail.com?subject=Mail from the Website">
+                <i class="fas fa-envelope"></i>
+                <span>andyviereck@gmail.com </span></a>
+        </div>
+        </div>
+    </section>
+
+    <footer>
+    <p>&copy; AV Car Detailing WA 2020</p>
+    </footer>
+</body>
+</html>
