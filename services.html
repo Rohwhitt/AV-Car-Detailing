@@ -185,6 +185,7 @@
 	<section id="quote-form">
 		<div class="container">
 		<div class="quote-form">
+    <form method="post" action="contactform.php">
 		<div class="field is-expanded">
 			<label class="label has-text-white">Full Name</label>
 			<div class="control has-icons-left has-icons-right">
@@ -197,7 +198,7 @@
 		<div class="field">
 			<label class="label has-text-white">Phone Number</label>
 			<div class="control has-icons-left has-icons-right">
-			<input class="input is-normal" type="text" id="phone" placeholder="Enter Phone Number">
+			<input class="input is-normal" type="text" id="phone" name="phone" placeholder="Enter Phone Number">
 			<span class="icon is-small is-left">
 				<i class="fas fa-phone"></i>
 				</span>
@@ -207,7 +208,7 @@
 		<div class="field">
 			<label class="label has-text-white">Email</label>
 			<div class="control has-icons-left">
-			<input class="input is-normal" type="email" id="email" placeholder="Enter Email">
+			<input class="input is-normal" type="email" name="email" id="email" placeholder="Enter Email">
 			<span class="icon is-small is-left">
 				<i class="fas fa-envelope"></i>
 				</span>
@@ -217,68 +218,25 @@
 		<div class="field">
 		<label class="label has-text-white">How can we help you?</label>
 		<div class="control">
-			<textarea class="textarea is-normal" id="body" placeholder="I was wondering about availability and rates. I need help with the following:"></textarea>
+			<textarea class="textarea is-normal" name="subject" id="body" placeholder="I was wondering about availability and rates. I need help with the following:"></textarea>
 			</div>
 		</div>
 
 		<div class="field is-grouped is-grouped-right">
 			<div class="control">
-				<button onclick="sendEmail()" class="button is-info">Submit</button>
+				<button type="submit" name="submit" class="button is-info">Submit</button>
 			</div>
 			<div class="control">
 				<button class="button is-light">Cancel</button>
 			</div>
 		</div>
 		</div>
+    </form>
 		</div>
 		</div>
     </section>
 	<!--quote form end-->
 
-	<!--quote form backend-->
-	  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-    function sendEmail() {
-      console.log('sending...');
-      var name = $("#name");
-      var phone = $("#phone");
-      var email = $("#email");
-      var body = $("#body");
-
-      if (isNotEmpty(name) && isNotEmpty(phone) && isNotEmpty(email) && isNotEmpty(body)) {
-        $.ajax({
-         url: 'sendEmail.php',
-         method: 'POST',
-         dataType: 'json',
-         data: {
-           name: name.val(),
-           phone: phone.val(),
-           email: email.val(),
-           body: body.val()
-         }, success: function (response) {
-           if (response.status == "success")
-           alert('Email has been Sent!');
-           else {
-             alert('Please try again');
-             console.log(response);
-           }
-         }
-       });
-      }
-    }
-
-    function isNotEmpty(caller) {
-      if (caller.val() == "") {
-        caller.css('border', '1px solid red');
-        return false;
-      } else
-          caller.css('border', '');
-
-          return true;
-    }
-
-    </script>
-    <!--quote form backend end-->
 
 	<!--contact and quote banner-->
     <section id="contact-banner">
